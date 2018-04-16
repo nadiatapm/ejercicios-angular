@@ -1,0 +1,7 @@
+<div id="list">
+    <div *ngFor="let counter of (counters | async)">
+        <p>
+            {{counter.counter}}
+        </p>
+    </div>
+</div>

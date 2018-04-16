@@ -1,0 +1,36 @@
+<div *ngIf="!(authService.user | async)">
+    <h2>
+        Formulario de Registro
+    </h2>
+    <form [formGroup]="userForm">
+        <div>
+            <p>Nombre</p>
+            <input type="text" formControlName="name">
+            <p *ngIf="userForm.get('name').status == 'INVALID' && !userForm.get('name').pristine" style="color:red;">Completa el campo</p>
+        </div>
+        <div>
+            <p>Edad</p>
+            <input type="number" formControlName="age">
+            <p *ngIf="userForm.get('age').status == 'INVALID' && !userForm.get('age').pristine" style="color:red;">Completa el campo</p>
+        </div>
+        <div>
+            <p>Correo Electrónico</p>
+            <input type="text" formControlName="mail">
+            <p *ngIf="userForm.get('mail').status == 'INVALID' && !userForm.get('mail').pristine" style="color:red;">Completa el campo</p>
+        </div>
+        <div>
+            <p>Contraseña</p>
+            <input type="password" formControlName="password">
+            <p *ngIf="userForm.get('password').status == 'INVALID' && !userForm.get('password').pristine" style="color:red;">Completa el campo</p>
+        </div>
+        <div>
+            <button (click)="onRegisterClick()">Registrar</button>
+        </div>
+        <!--div>
+            <button (click)="onLogoutClick()">Salir</button>
+        </div-->
+    </form>
+</div>
+
+<!--p>Form status: {{ userForm.get("name").status | json }}</p>
+<p>Form state: {{ userForm.get("name").pristine | json }}</p-->
