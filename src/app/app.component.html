@@ -2,7 +2,9 @@
     <app-title></app-title>
     <app-display [counter]="componentCounter"></app-display>
     <app-control [counter]="componentCounter" (onReset)=" onResetCounter($event)"></app-control>
-    <app-register-form></app-register-form>
+    <!--se borra app register porque se va a visualizar desde el router-->
+    <!--app-register-form></app-register-form-->
+    <router-outlet></router-outlet>
     <app-counter-list></app-counter-list>
 
 </div>

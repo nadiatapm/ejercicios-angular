@@ -1,4 +1,4 @@
-<div *ngIf="!(authService.user | async)">
+<div>
     <h2>
         Formulario de Registro
     </h2>
@@ -26,9 +26,9 @@
         <div>
             <button (click)="onRegisterClick()">Registrar</button>
         </div>
-        <!--div>
+        <div>
             <button (click)="onLogoutClick()">Salir</button>
-        </div-->
+        </div>
     </form>
 </div>
 

@@ -34,4 +34,17 @@ export class ControlComponent implements OnInit {
         counter: this.counter.currentValue
       });
     }
+    //agregar boton remove
+    onRemoveClick(){
+      //elimino arreglo completo
+      this.af.list("/counter").remove();
+      
+      /*con esto puedo eliminar un elemento de la lista
+       this.af.list("/counter").remove()
+       se le agrega el id del elemento a eliminar
+       ;*/
+    }
 }
+/*deleteTodo(todo: any): void {
+  this.af.object('/todos/' + todo.$key).remove();
+}*/

@@ -17,6 +17,7 @@ import { AngularFireDatabase, FirebaseListObservable }
 
 import { AuthService } from './auth.service';
 import { CounterListComponent } from './counter-list/counter-list.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -36,7 +37,8 @@ import { CounterListComponent } from './counter-list/counter-list.component';
     BrowserModule,
     ReactiveFormsModule ,// <-- #2 add to @NgModule imports
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AppRoutingModule
   ],
   providers: [AuthService, AngularFireDatabase],
   bootstrap: [AppComponent]
